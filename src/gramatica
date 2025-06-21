@@ -1,0 +1,59 @@
+<programa> ::= { (<decl-var> | <funcao> | <comando>) }
+
+(* Declaração de Variáveis *)
+<decl-var> ::= "var" <identificador> ":" <tipo> [ "=" <expressao> ] ";"
+<tipo>     ::= "int" | "float" | "char" | "bool" | "string"
+
+(* Definição de Funções *)
+<funcao>   ::= "func" <identificador> "(" [ <parametros> ] ")" ":" <tipo>
+               "{" { <comando> } "return" <expressao> ";" "}"
+<parametros> ::= <identificador> ":" <tipo> { "," <identificador> ":" <tipo> }
+
+(* Comandos *)
+<comando> ::= <atribuicao>
+            | <controle-fluxo>
+            | <entrada-saida>
+            | <laco>
+
+(* Atribuições *)
+<atr-expr>   ::= <identificador> "=" <expressao>
+<atribuicao> ::= <atr-expr> ";"
+
+(* Controle de Fluxo *)
+<controle-fluxo> ::= "if" "(" <expressao> ")" "{" { <comando> } "}"
+                    [ "else" "{" { <comando> } "}" ]
+
+(* Entrada e Saída *)
+<entrada-saida> ::= "print" "(" <expressao> ")" ";"
+                 | "input" "(" <identificador> ")" ";"
+
+(* Laços *)
+<laco> ::= "while" "(" <expressao> ")" "{" { <comando> } "}"
+        | "for" "(" <atr-expr> ";" <expressao> ";" <atr-expr> ")" "{" { <comando> } "}"
+
+(* Expressões — precedência e associatividade *)
+<expressao> ::= <relExpr>
+
+<relExpr>   ::= <addExpr> { ( "==" | "!=" | "<" | ">" | "<=" | ">=" ) <addExpr> }
+<addExpr>   ::= <mulExpr> { ( "+" | "-" ) <mulExpr> }
+<mulExpr>   ::= <unary>   { ( "*" | "/" | "%" ) <unary> }
+<unary>     ::= [ "+" | "-" ] <primary>
+
+<primary>   ::= <identificador> "(" [ <argList> ] ")"
+              | <identificador>
+              | <numero>
+              | <string>
+              | <bool>
+              | "(" <expressao> ")"
+
+<argList>   ::= <expressao> { "," <expressao> }
+
+(* Terminais *)
+<identificador> ::= letter ( letter | digit | "_" )*
+<numero>        ::= digit { digit } [ "." digit { digit } ]
+<string>        ::= "\"" character* "\""
+<bool>          ::= "true" | "false"
+
+letter     ::= "a" | … | "z" | "A" | … | "Z" | "_"
+digit      ::= "0" | … | "9"
+character  ::= qualquer caractere exceto "\""
