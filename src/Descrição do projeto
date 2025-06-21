@@ -1,0 +1,83 @@
+O grupo deverá desenvolver o compilador para a linguagem detalhada abaixo. Deverão ser consideradas as seguintes fases:
+• Analisador léxico
+• Analisador sintático
+• Analisador semântico
+• Gerador de Código
+
+Não será necessário o desenvolvimento das fases Geração de código intermediário, otimização de código intermediário e otimização de código alvo.
+O compilador deverá ser desenvolvido em uma linguagem compilada (C, C++, Java, Rust, etc) e cada fase deverá ser implementada em um módulo/pacote separado.
+
+Enunciado do projeto:
+
+O Professor Marco Antônio, criou as definições de uma nova linguagem de programação, chamada MACSLang. O problema é que apenas a linguagem foi definida, mas ele não teve tempo de criar um compilador para essa linguagem.
+Ele decidiu então, pedir que seus incríveis alunos da UNI-BH desenvolvam esse compilador para a primeira versão da MACSLang.
+Neste documento vamos conhecer melhor os atributos e características da linguagem e entender o que e pra quando o professor precisa do compilador pronto.
+
+Definição de Linguagem de Programação
+Nome da Linguagem MACSLang
+Arquitetura de Destino X86
+Sistema Operacional Windows
+Paradigma Imperativa e Estruturada
+    Paradigma Imperativo
+        O paradigma imperativo é um estilo de programação onde o código é escrito como uma sequência de comandos que modificam o estado do programa. Ou seja, o programador diz explicitamente ao computador como realizar uma tarefa, passo a passo.
+        Principais características do paradigma imperativo:
+        • Comandos sequenciais: O código é executado na ordem em que aparece.
+        • Uso de variáveis e estados: Os valores podem ser armazenados em variáveis e modificados ao longo do tempo.
+        • Controle de fluxo: A execução pode ser alterada por meio de estruturas como if, while, for, switch, etc.
+Paradigma Estruturado
+        O paradigma estruturado é um subconjunto do paradigma imperativo que evita o uso de comandos de salto direto (como goto) e organiza o código em estruturas de controle bem definidas.
+        Princípios da programação estruturada:
+        1. Sequência: O código é executado na ordem das instruções.
+        2. Decisão (seleção condicional): Uso de if-else, switch para alterar o fluxo do programa.
+        3. Repetição (laços de controle): Uso de while, for para repetições controladas.
+
+As principais caracteríticas da Linguagem são:
+• Tipagem estática
+• Sintaxe simplificada
+• Controle de fluxo com condicionais e laços
+• Operações básicas de entrada e saída
+• Suporte a funções
+
+As principais declarações da Linguagem são:
+• Declaração de Variáveis
+
+var <nome>: <tipo> = <valor opcional>;
+
+Os tipos suportados são:
+o int → Inteiros
+o float → Números de ponto flutuante
+o char → Caracteres
+o bool → Booleano (true ou false)
+o string → Cadeia de caracteres
+
+
+• Entrada e Saída
+print(<expressão>); // Exibe no console
+input(<variável>); // Lê valor do usuário e armazena na variável
+
+
+• Estruturas Condicionais
+if (<condição>) {
+// bloco de código
+} else {
+// bloco alternativo
+}
+
+• Laços de Repetição
+while
+
+while (<condição>) {
+// bloco de código
+}
+
+for
+for (<inicialização>; <condição>; <incremento>) {
+// bloco de código
+}
+
+Funções
+func <nome>(<parametros>): <tipo_retorno> {
+// bloco de código
+return <valor>;
+}
+
