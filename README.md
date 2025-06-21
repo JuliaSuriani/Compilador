@@ -1,21 +1,21 @@
 # Compilador - MACSLang
 
 ## Autores:
-@JuliaSuriani
+@[Ana Luísa Pacífico](https://github.com/anapacifico)
 
-@ nome
+@[Julia Suriani de O. Silva](https://github.com/JuliaSuriani)
 
-@ nome
+@[Mariana Teixeira Gonçalves](https://github.com/mariteixeiraa)
 
-@ nome
+@[Mateus Mendes Mattos](https://github.com/Mateus0062)
 
 ## Objetivo do projeto
 
 Criar um compilador que seja capaz de analisar (Léxico, sintático e semanticamente) a linguagem MACSLang e gerar o código para máquina.
 
-Os parâmetros e descrição da linguagem estão definidos no arquivo MACSLANG (inserir link que leve para a pasta).
+Os parâmetros e descrição da linguagem estão definidos no arquivo [MACSLANG](src/MACSLang).
 
-A gramática da linguagem está disponível no arquivo gramatica.txt (inserir link que leve para a pasta)
+A gramática da linguagem está disponível no arquivo [gramatica](src/gramatica).
 
 ## Tecnologias utilizadas
 Java. 
@@ -23,10 +23,10 @@ Java.
 
 ## Como funciona o compilador
 O compilador possui as seguintes fases de análise:
-- **Análise Léxica** (inserir link que leve para o arquivo AnalisadorLexico): transforma o código-fonte em uma sequência de tokens.
-- **Análise Sintática** (inserir link que leve para o arquivo AnalisadorSintatico):garante que o código siga as regras gramaticais da linguagem.
-- **Análise Semântica** (inserir link que leve para o arquivo AnalisadorSintatico): verifica a coerência e o significado do código, como a compatibilidade de tipos e a declaração correta de variáveis
-- **Gerador de código**: converte o código intermediário em código de destino.
+- **[Análise Léxica](src/AnalisadorLexico.java)**: transforma o código-fonte em uma sequência de tokens.
+- **[Análise Sintática](src/AnalisadorSintatico.java)**: garante que o código siga as regras gramaticais da linguagem.
+- **[Análise Semântica](src/AnalisadorSintatico.java)**: verifica a coerência e o significado do código, como a compatibilidade de tipos e a declaração correta de variáveis
+- **[Gerador de código](src/GeradorCodigo.java)**: converte o código intermediário em código de destino.
 
 
 ## Como usar o projeto
